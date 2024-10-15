@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Сверстанная HTML 5 страница</title>
+</head>
+<body>
+  <h1>Список гиперссылок</h1>
+  <ul>
+    <li><a href="https://kubsu.ru">Главная страница kubsu.ru (абсолютная)</a></li>
+    <li><a href="https://kubsu.ru">Главная страница kubsu.ru (абсолютная, https)</a></li>
+    <li><a href="https://kubsu.ru/images/logo.png"><img src="https://kubsu.ru/images/logo.png" alt="Логотип КубГУ"></a></li>
+    <li><a href="about.html">О нас (сокращенная, внутренняя)</a></li>
+    <li><a href="/">Главная (сокращенная)</a></li>
+    <li><a href="#footer">Футер (ссылка на фрагмент)</a></li>
+    <li><a href="https://kubsu.ru/news?page=1&category=science&sort=date">Новости (ссылка с параметрами)</a></li>
+    <li><a href="https://kubsu.ru/news?id=123">Новость (ссылка с параметром id)</a></li>
+    <li><a href="about/team.html">Команда (относительная, текущий каталог)</a></li>
+    <li><a href="../about/history.html">История (относительная, каталог about)</a></li>
+    <li><a href="../../index.html">Главная (относительная, каталог уровнем выше)</a></li>
+    <li><a href="../../../index.html">Главная (относительная, каталог двумя уровнями выше)</a></li>
+    <li>Контекстная ссылка в тексте: <a href="https://kubsu.ru/contacts">Контакты</a></li>
+    <li><a href="https://example.com/page#section">Фрагмент страницы стороннего сайта</a></li>
+    <li>
+      <map name="image-map">
+        <area shape="rect" coords="0,0,100,100" href="https://kubsu.ru">
+        <area shape="circle" coords="150,150,50" href="https://kubsu.ru/about">
+      </map>
+      <img src="image.png" usemap="#image-map" alt="Карта изображения">
+    </li>
+    <li><a href="#">Ссылка с пустым href</a></li>
+    <li><a>Ссылка без href</a></li>
+    <li><a href="https://kubsu.ru" rel="nofollow">Ссылка, по которой запрещен переход поисковикам</a></li>
+    <li><a href="https://kubsu.ru" rel="noindex">Ссылка, запрещенная для индексации поисковиками</a></li>
+  </ul>
+
+  <h1>Нумерованный список ссылок с подписями title</h1>
+  <ol>
+    <li><a href="https://kubsu.ru" title="Главная страница">Главная</a></li>
+    <li><a href="https://kubsu.ru/about" title="О нас">О нас</a></li>
+    <li><a href="https://kubsu.ru/news" title="Новости">Новости</a></li>
+    <li><a href="https://kubsu.ru/contacts" title="Контакты">Контакты</a></li>
+  </ol>
+
+  <h1>Ссылка на файл на сервере FTP с авторизацией</h1>
+  <a href="ftp://user:password@example.com/file.txt">Файл на FTP</a>
+
+  <h1>Форма</h1>
+  <form>
+    <label for="name">ФИО:</label>
+    <input type="text" id="name" name="name">
+
+    <label for="phone">Телефон:</label>
+    <input type="tel" id="phone" name="phone">
+
+    <label for="email">E-mail:</label>
+    <input type="email" id="email" name="email">
+
+    <label for="birthdate">Дата рождения:</label>
+    <input type="date" id="birthdate" name="birthdate">
+
+    <label for="gender">Пол:</label>
+    <input type="radio" id="male" name="gender" value="male">
+    <label for="male">Мужской</label>
+    <input type="radio" id="female" name="gender" value="female">
+    <label for="female">Женский</label>
+
+    <label for="languages">Любимый язык программирования:</label>
+    <select multiple id="languages" name="languages">
+      <option value="pascal">Pascal</option>
+      <option value="c">C</option>
+      <option value="c++">C++</option>
+      <option value="javascript">JavaScript</option>
+      <option value="php">PHP</option>
+      <option value="python">Python</option>
+      <option value="java">Java</option>
+      <option value="haskell">Haskell</option>
+      <option value="clojure">Clojure</option>
+      <option value="prolog">Prolog</option>
+      <option value="scala">Scala</option>
+    </select>
+
+    <label for="biography">Биография:</label>
+    <textarea id="biography" name="biography"></textarea>
+
+    <label for="contract">С контрактом ознакомлен(а):</label>
+    <input type="checkbox" id="contract" name="contract">
+
+    <input type="submit" value="Сохранить">
+  </form>
+
+  <div id="footer">Футер</div>
+</body>
+</html>
